@@ -19,7 +19,7 @@ namespace ITK
         private void btn_Click(object sender, EventArgs e)
         {
             if (radioButton1.Checked)
-                output.Text = Cesar(input.Text, 12);
+                output.Text = Cesar(input.Text, (int)numericUpDown1.Value);
             else
                 if (radioButton2.Checked)
                     output.Text = Date(input.Text, dateTimePicker1.Value);
@@ -30,8 +30,17 @@ namespace ITK
         protected string Square(String input)
         {
             string s = "";
-            int length = Convert.ToInt32(Math.Floor(Math.Sqrt(input.Length+1)));
-            MessageBox.Show(length.ToString());
+            int length = Convert.ToInt32(Math.Floor(Math.Sqrt(input.Length+1))) + 1;
+            int k = 0;
+            for (int j = 0; j < length; j++)
+			{
+			    for (int i = 0; i < length; i++)
+                {
+                    k = i * length + j;
+                    if (k >= input.Length) break;
+                    s += input[k];
+                }
+			}
             return s;
         }
 

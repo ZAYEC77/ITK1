@@ -120,6 +120,11 @@
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(53, 20);
             this.numericUpDown1.TabIndex = 6;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // radioButton3
             // 
@@ -128,7 +133,6 @@
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(59, 17);
             this.radioButton3.TabIndex = 7;
-            this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Square";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
@@ -136,7 +140,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(486, 261);
+            this.ClientSize = new System.Drawing.Size(484, 261);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.dateTimePicker1);
@@ -147,6 +151,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.input);
             this.Controls.Add(this.btn);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(500, 300);
+            this.MinimumSize = new System.Drawing.Size(500, 300);
             this.Name = "Form1";
             this.Text = "Crypt";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
