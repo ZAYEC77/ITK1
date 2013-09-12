@@ -47,6 +47,7 @@ namespace ITK
         protected string Date(String input, DateTime date)
         {
             int offset = date.Year + date.Month + date.Day;
+            offset = offset % 255;
             return Cesar(input, offset);
         }
 
